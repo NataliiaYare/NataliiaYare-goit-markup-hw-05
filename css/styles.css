@@ -11,6 +11,12 @@ body {
 /* ================== Resetting styles ============= */
 button {
   cursor: pointer;
+  font-family: inherit;
+  color: currentColor;
+}
+
+input {
+  font-family: inherit;
 }
 
 .link {
@@ -40,6 +46,13 @@ img {
   display: block;
   max-width: 100%;
 }
+
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
 /* ======= Sticking footer position ========== */
 a:link {
   text-decoration: none;
@@ -54,8 +67,10 @@ a:link {
 /* ================== Header ===================== */
 .top-header {
   border-bottom: 1px solid #e7e9fc;
-background: var(--WHITE, #FFF);
-box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 2px 1px 0px rgba(46, 47, 66, 0.08);
+  background: var(--WHITE, #fff);
+  box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 2px 1px 0px rgba(46, 47, 66, 0.08);
 }
 
 .top-header .container {
@@ -112,14 +127,14 @@ box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47,
 }
 
 .current::after {
-content: "";
-left: 0;
-bottom: -1px;
-position: absolute;
-width: 100%;
-height: 4px;
-border-radius: 2px;
-background-color: #404bbf; 
+  content: "";
+  left: 0;
+  bottom: -1px;
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #404bbf;
 }
 
 .navigation-item:hover,
@@ -148,12 +163,14 @@ background-color: #404bbf;
 
 .hero {
   background-color: #2e2f42;
-  max-width: 1440px; 
+  max-width: 1440px;
   height: 600px;
   padding: 188px 0;
-background-image: linear-gradient(rgba(46, 47, 66, 0.7),
- rgba(46, 47, 66, 0.7)),
-  url(../images/img-name.jpg);
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/img-name.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -242,8 +259,8 @@ background-image: linear-gradient(rgba(46, 47, 66, 0.7),
   width: 264px;
   height: 112px;
   display: flex;
-  align-items: center; 
-  justify-content: center; 
+  align-items: center;
+  justify-content: center;
   flex-shrink: 0;
   border-radius: 4px;
   border: 1px solid var(--LIGHT-SLATE, #8e8f99);
@@ -344,7 +361,7 @@ background-image: linear-gradient(rgba(46, 47, 66, 0.7),
 
 .social-list-link:hover,
 .social-list-link:focus {
-  background-color:  #404bbf;
+  background-color: #404bbf;
 }
 
 .soc-list-icon {
@@ -364,11 +381,13 @@ background-image: linear-gradient(rgba(46, 47, 66, 0.7),
 .portfolio-card {
   background: var(--WHITE, #ffffff);
   width: calc((100% - 48px) / 3);
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-card:hover {
-box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+.portfolio-card:hover,
+.portfolio-card:focus {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .our-portfolio-title {
@@ -422,22 +441,22 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
 }
 
 .overlay {
-  color: #F4F4FD;
-font-size: 16px;
-font-weight: 400;
-line-height: 1.5;
-letter-spacing: 0.02em;
+  color: #f4f4fd;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #4D5AE5;
+  background-color: #4d5ae5;
   width: 100%;
-padding: 40px 32px;
-overflow: auto;
-transform: translateY(100%);
-transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 40px 32px;
+  overflow: auto;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*============================== Footer -====================*/
@@ -450,7 +469,6 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-style-box {
-
   display: flex;
   align-items: baseline;
 }
@@ -516,4 +534,225 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 .social-list-link-footer:hover,
 .social-list-link-footer:focus {
   background-color: #31d0aa;
+}
+
+/* ==================== Backdrop Styles ========================= */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99999999;
+  background-color: rgba(46, 47, 66, 0.4);
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* ================ Modal Window ======================== */
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 408px;
+  min-height: 584px;
+  background-color: #fcfcfc;
+  border-radius: 4px;
+  padding: 72px 24px 24px 24px;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 24px;
+  height: 24px;
+  background-color: #e7e9fc;
+  border: 4px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  line-height: 0;
+  padding: 0;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close-btn-icon {
+  fill: #2e2f42;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+  background-color: #404bbf;
+}
+
+.modal-close-btn:hover .modal-close-btn-icon,
+.modal-close-btn:focus .modal-close-btn-icon {
+  fill: #ffffff;
+}
+
+.modal-cta-paragraph {
+  color: #2e2f42;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+}
+
+/* ====================== Modal form STYLES ======================= */
+.cta-form-label {
+  display: block;
+  margin-bottom: 4px;
+
+  color: #8e8f99;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.04em;
+}
+
+.cta-form-textarea {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.cta-form-input {
+  display: block;
+  padding-left: 38px;
+  width: 100%;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cta-form-input:focus {
+  border-color: #4d5ae5;
+  outline-color: transparent;
+  outline-offset: 4px;
+}
+
+.cta-form-textarea {
+  width: 100%;
+  height: 120px;
+  border-radius: 4px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  padding-left: 16px;
+  padding: 8px 16px;
+
+  color: rgba(46, 47, 66, 0.4);
+
+  /* Small Text */
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.04em;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cta-form-textarea:focus {
+  border-color: #4d5ae5;
+  outline-color: transparent;
+  outline-offset: 4px;
+}
+
+.cta-form-textarea::placeholder {
+  color: rgba(46, 47, 66, 0.4);
+}
+
+.cta-form-wrapper {
+  margin-bottom: 8px;
+}
+
+.cta-form-input-icon {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  fill: #2e2f42;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cta-form-input-icon-wrapper {
+  position: relative;
+}
+
+.cta-form-input:focus + .cta-form-input-icon {
+  fill: #4d5ae5;
+} /* ====================== /Modal form STYLES======================= */
+
+.cta-checkbox-wrapper {
+  margin-bottom: 24px;
+}
+
+.cta-own-checkbox {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  cursor: pointer;
+  fill: transparent;
+  margin-right: 8px;
+}
+
+.cta-checkbox-label {
+  color: #8e8f99;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+}
+.privacy-policy {
+  color: #4d5ae5;
+  text-decoration: underline;
+}
+
+.cta-checkbox:checked + .cta-checkbox-label .cta-own-checkbox {
+  background-color: #4d5ae5;
+  fill: #f4f4fd;
+}
+
+.cta-checkbox:focus + .cta-checkbox-label .cta-own-checkbox {
+  outline: 2px solid rgba(0, 0, 255, 0.5);
+}
+
+.cta-button {
+  display: block;
+  margin: auto;
+  background-color: #4d5ae5;
+  padding: 16px 32px;
+  border-radius: 4px;
+  color: #ffffff;
+  text-align: center;
+  align-items: center;
+  border: none;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Button Text */
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+}
+
+.cta-button:hover,
+.cta-button:focus {
+  background: var(--OCEAN, #404bbf);
 }
