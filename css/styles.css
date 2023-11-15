@@ -536,6 +536,19 @@ a:link {
   background-color: #31d0aa;
 }
 
+/* ==================== Subscribe============================== */
+.subscribe-paragraph {
+  color: var(--WHITE, #fff);
+
+  /* Body Medium */
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.32px;
+}
+
 /* ==================== Backdrop Styles ========================= */
 
 .backdrop {
