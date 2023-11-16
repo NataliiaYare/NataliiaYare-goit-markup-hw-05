@@ -685,12 +685,13 @@ a:link {
 .cta-form-label {
   display: block;
   margin-bottom: 4px;
-
+  height: 18px;
   color: #8e8f99;
   font-size: 12px;
   font-weight: 400;
-  line-height: 1.2;
-  letter-spacing: -0.04em;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .cta-form-textarea {
